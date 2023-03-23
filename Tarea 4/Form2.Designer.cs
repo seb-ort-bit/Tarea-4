@@ -73,6 +73,7 @@
             linkRegistrate.TabIndex = 13;
             linkRegistrate.TabStop = true;
             linkRegistrate.Text = "Ingresa";
+            linkRegistrate.LinkClicked += linkRegistrate_LinkClicked;
             // 
             // lblCuenta
             // 
@@ -93,6 +94,7 @@
             btnEntrar.TabIndex = 11;
             btnEntrar.Text = "Registrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblLogin
             // 
@@ -188,7 +190,8 @@
             Controls.Add(txtLoginUsuario);
             Name = "formRegister";
             Text = "Registrarse";
-            Load += Form2_Load;
+            FormClosing += formRegister_Closing;
+            Load += formRegister_Load;
             ResumeLayout(false);
             PerformLayout();
         }

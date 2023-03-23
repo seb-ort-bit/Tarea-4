@@ -17,9 +17,29 @@ namespace Tarea_4
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkRegistrate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            (new formLogin()).Show(); this.Hide();
+        }
+
+        private void formRegister_FormClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void formRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formRegister_Closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

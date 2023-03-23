@@ -74,6 +74,7 @@
             btnEntrar.TabIndex = 3;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblCuenta
             // 
@@ -95,6 +96,7 @@
             linkRegistrate.TabIndex = 5;
             linkRegistrate.TabStop = true;
             linkRegistrate.Text = "Regístrate";
+            linkRegistrate.LinkClicked += linkRegistrate_LinkClicked;
             // 
             // lblUsuario
             // 
@@ -132,6 +134,8 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "formLogin";
             Text = "Log in";
+            FormClosing += formLogin_Closing;
+            Load += formLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
