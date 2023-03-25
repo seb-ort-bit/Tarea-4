@@ -7,6 +7,22 @@ namespace Tarea_4
             InitializeComponent();
         }
 
+        private bool validarLogin(bool Valido)
+        {
+            foreach (var txtBox in this.Controls.OfType<TextBox>())
+            {
+
+                if (string.IsNullOrWhiteSpace(txtBox.Text))
+                {
+                    return false;
+
+                }
+            }
+
+            return true;
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

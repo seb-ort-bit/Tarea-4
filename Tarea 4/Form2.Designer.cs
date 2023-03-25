@@ -34,20 +34,26 @@
             lblCuenta = new Label();
             btnEntrar = new Button();
             lblLogin = new Label();
-            txtLoginContraseña = new TextBox();
-            txtLoginUsuario = new TextBox();
+            txtRegistroApellido = new TextBox();
+            txtRegistroNombre = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtRegistroContraseña = new TextBox();
+            txtRegistroUsuario = new TextBox();
             lblWarningRegistro = new Label();
+            lblCorreo = new Label();
+            textBox1 = new TextBox();
+            lblTelefono = new Label();
+            textBox2 = new TextBox();
+            lblConfirmar = new Label();
+            textBox3 = new TextBox();
             SuspendLayout();
             // 
             // lblConstraseña
             // 
             lblConstraseña.AutoSize = true;
             lblConstraseña.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblConstraseña.Location = new Point(42, 122);
+            lblConstraseña.Location = new Point(44, 122);
             lblConstraseña.Name = "lblConstraseña";
             lblConstraseña.Size = new Size(58, 19);
             lblConstraseña.TabIndex = 15;
@@ -57,7 +63,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUsuario.Location = new Point(42, 60);
+            lblUsuario.Location = new Point(44, 60);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 19);
             lblUsuario.TabIndex = 14;
@@ -67,7 +73,7 @@
             // 
             linkRegistrate.AutoSize = true;
             linkRegistrate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            linkRegistrate.Location = new Point(192, 364);
+            linkRegistrate.Location = new Point(192, 553);
             linkRegistrate.Name = "linkRegistrate";
             linkRegistrate.Size = new Size(61, 21);
             linkRegistrate.TabIndex = 13;
@@ -79,7 +85,7 @@
             // 
             lblCuenta.AutoSize = true;
             lblCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCuenta.Location = new Point(29, 364);
+            lblCuenta.Location = new Point(29, 553);
             lblCuenta.Name = "lblCuenta";
             lblCuenta.Size = new Size(165, 21);
             lblCuenta.TabIndex = 12;
@@ -88,7 +94,7 @@
             // btnEntrar
             // 
             btnEntrar.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.Location = new Point(40, 327);
+            btnEntrar.Location = new Point(40, 516);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(210, 34);
             btnEntrar.TabIndex = 11;
@@ -106,27 +112,27 @@
             lblLogin.TabIndex = 10;
             lblLogin.Text = "Registro";
             // 
-            // txtLoginContraseña
+            // txtRegistroApellido
             // 
-            txtLoginContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLoginContraseña.Location = new Point(40, 144);
-            txtLoginContraseña.Name = "txtLoginContraseña";
-            txtLoginContraseña.Size = new Size(210, 26);
-            txtLoginContraseña.TabIndex = 9;
+            txtRegistroApellido.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRegistroApellido.Location = new Point(40, 144);
+            txtRegistroApellido.Name = "txtRegistroApellido";
+            txtRegistroApellido.Size = new Size(210, 26);
+            txtRegistroApellido.TabIndex = 9;
             // 
-            // txtLoginUsuario
+            // txtRegistroNombre
             // 
-            txtLoginUsuario.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLoginUsuario.Location = new Point(40, 85);
-            txtLoginUsuario.Name = "txtLoginUsuario";
-            txtLoginUsuario.Size = new Size(210, 26);
-            txtLoginUsuario.TabIndex = 8;
+            txtRegistroNombre.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRegistroNombre.Location = new Point(40, 85);
+            txtRegistroNombre.Name = "txtRegistroNombre";
+            txtRegistroNombre.Size = new Size(210, 26);
+            txtRegistroNombre.TabIndex = 8;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(42, 240);
+            label1.Location = new Point(44, 362);
             label1.Name = "label1";
             label1.Size = new Size(79, 19);
             label1.TabIndex = 19;
@@ -136,58 +142,118 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(42, 178);
+            label2.Location = new Point(44, 178);
             label2.Name = "label2";
             label2.Size = new Size(129, 19);
             label2.TabIndex = 18;
             label2.Text = "Nombre de Usuario";
             // 
-            // textBox1
+            // txtRegistroContraseña
             // 
-            textBox1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(40, 262);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 26);
-            textBox1.TabIndex = 17;
+            txtRegistroContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRegistroContraseña.Location = new Point(40, 384);
+            txtRegistroContraseña.Name = "txtRegistroContraseña";
+            txtRegistroContraseña.Size = new Size(210, 26);
+            txtRegistroContraseña.TabIndex = 17;
             // 
-            // textBox2
+            // txtRegistroUsuario
             // 
-            textBox2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(40, 203);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(210, 26);
-            textBox2.TabIndex = 16;
+            txtRegistroUsuario.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRegistroUsuario.Location = new Point(40, 203);
+            txtRegistroUsuario.Name = "txtRegistroUsuario";
+            txtRegistroUsuario.Size = new Size(210, 26);
+            txtRegistroUsuario.TabIndex = 16;
             // 
             // lblWarningRegistro
             // 
             lblWarningRegistro.AutoSize = true;
             lblWarningRegistro.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             lblWarningRegistro.ForeColor = Color.Crimson;
-            lblWarningRegistro.Location = new Point(42, 300);
+            lblWarningRegistro.Location = new Point(42, 489);
             lblWarningRegistro.Name = "lblWarningRegistro";
             lblWarningRegistro.Size = new Size(221, 20);
             lblWarningRegistro.TabIndex = 20;
             lblWarningRegistro.Text = "Hay campos obligatorios vacíos";
             lblWarningRegistro.Visible = false;
             // 
+            // lblCorreo
+            // 
+            lblCorreo.AutoSize = true;
+            lblCorreo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCorreo.Location = new Point(44, 239);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(121, 19);
+            lblCorreo.TabIndex = 22;
+            lblCorreo.Text = "Correo Electrónico";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(40, 261);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(210, 26);
+            textBox1.TabIndex = 21;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTelefono.Location = new Point(44, 299);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(60, 19);
+            lblTelefono.TabIndex = 24;
+            lblTelefono.Text = "Teléfono";
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(40, 321);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(210, 26);
+            textBox2.TabIndex = 23;
+            // 
+            // lblConfirmar
+            // 
+            lblConfirmar.AutoSize = true;
+            lblConfirmar.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblConfirmar.Location = new Point(44, 425);
+            lblConfirmar.Name = "lblConfirmar";
+            lblConfirmar.Size = new Size(144, 19);
+            lblConfirmar.TabIndex = 26;
+            lblConfirmar.Text = "Confirmar Contraseña";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(40, 447);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(210, 26);
+            textBox3.TabIndex = 25;
+            // 
             // formRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(294, 398);
+            ClientSize = new Size(294, 584);
+            Controls.Add(lblConfirmar);
+            Controls.Add(textBox3);
+            Controls.Add(lblTelefono);
+            Controls.Add(textBox2);
+            Controls.Add(lblCorreo);
+            Controls.Add(textBox1);
             Controls.Add(lblWarningRegistro);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
+            Controls.Add(txtRegistroContraseña);
+            Controls.Add(txtRegistroUsuario);
             Controls.Add(lblConstraseña);
             Controls.Add(lblUsuario);
             Controls.Add(linkRegistrate);
             Controls.Add(lblCuenta);
             Controls.Add(btnEntrar);
             Controls.Add(lblLogin);
-            Controls.Add(txtLoginContraseña);
-            Controls.Add(txtLoginUsuario);
+            Controls.Add(txtRegistroApellido);
+            Controls.Add(txtRegistroNombre);
             Name = "formRegister";
             Text = "Registrarse";
             FormClosing += formRegister_Closing;
@@ -204,12 +270,18 @@
         private Label lblCuenta;
         private Button btnEntrar;
         private Label lblLogin;
-        private TextBox txtLoginContraseña;
-        private TextBox txtLoginUsuario;
+        private TextBox txtRegistroApellido;
+        private TextBox txtRegistroNombre;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtRegistroContraseña;
+        private TextBox txtRegistroUsuario;
         private Label lblWarningRegistro;
+        private Label lblCorreo;
+        private TextBox textBox1;
+        private Label lblTelefono;
+        private TextBox textBox2;
+        private Label lblConfirmar;
+        private TextBox textBox3;
     }
 }

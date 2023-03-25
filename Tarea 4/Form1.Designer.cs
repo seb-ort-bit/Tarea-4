@@ -132,7 +132,9 @@
             Controls.Add(txtLoginContraseña);
             Controls.Add(txtLoginUsuario);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "formLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Log in";
             FormClosing += formLogin_Closing;
             Load += formLogin_Load;
