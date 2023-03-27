@@ -18,13 +18,15 @@ namespace Tarea_4
         }
 
 
-        private bool validarRegistro(bool Valido)
+        private bool validarRegistro()
         {
+            //Revisar todos los textbox en el Form actual y verificar si estan vacios o solo tienen espacios.
             foreach (var txtBox in this.Controls.OfType<TextBox>())
             {
 
                 if (string.IsNullOrWhiteSpace(txtBox.Text))
                 {
+                    lblWarningRegistro.Visible = true;
                     return false;
 
                 }
@@ -36,20 +38,24 @@ namespace Tarea_4
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader("Sample.txt");
-            //Read the first line of text
-            var line = sr.ReadLine();
-            //Continue to read until you reach end of file
-            while (line != null)
+            if (validarRegistro() == true)
             {
-                //write the line to console window
-                Console.WriteLine(line);
-                //Read the next line
-                line = sr.ReadLine();
+                var path = Application.StartupPath + "\\datos.txt\\";
+                if (!File.Exists(path)) { }
+                StreamWriter sw = new StreamWriter(path);
+                StreamReader sr = new StreamReader(path);
+                var linea = sr.ReadLine();
+                //loop que lee todas las lineas del archivo
+                while (linea != null)
+                {
+
+
+                    //Siguiente Linea
+                    linea = sr.ReadLine();
+                }
+                //cerrar archivo
+                sr.Close();
             }
-            //close the file
-            sr.Close();
         }
 
         private void linkRegistrate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -59,6 +65,7 @@ namespace Tarea_4
 
         private void formRegister_Load(object sender, EventArgs e)
         {
+            
 
         }
 

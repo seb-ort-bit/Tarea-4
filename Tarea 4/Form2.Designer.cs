@@ -38,15 +38,15 @@
             txtRegistroNombre = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            txtRegistroContraseña = new TextBox();
+            txtContraseña = new TextBox();
             txtRegistroUsuario = new TextBox();
             lblWarningRegistro = new Label();
             lblCorreo = new Label();
-            textBox1 = new TextBox();
+            txtCorreo = new TextBox();
             lblTelefono = new Label();
-            textBox2 = new TextBox();
+            txtTelefono = new TextBox();
             lblConfirmar = new Label();
-            textBox3 = new TextBox();
+            txtConfirmar = new TextBox();
             SuspendLayout();
             // 
             // lblConstraseña
@@ -148,13 +148,13 @@
             label2.TabIndex = 18;
             label2.Text = "Nombre de Usuario";
             // 
-            // txtRegistroContraseña
+            // txtContraseña
             // 
-            txtRegistroContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRegistroContraseña.Location = new Point(40, 384);
-            txtRegistroContraseña.Name = "txtRegistroContraseña";
-            txtRegistroContraseña.Size = new Size(210, 26);
-            txtRegistroContraseña.TabIndex = 17;
+            txtContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtContraseña.Location = new Point(40, 384);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(210, 26);
+            txtContraseña.TabIndex = 17;
             // 
             // txtRegistroUsuario
             // 
@@ -186,13 +186,13 @@
             lblCorreo.TabIndex = 22;
             lblCorreo.Text = "Correo Electrónico";
             // 
-            // textBox1
+            // txtCorreo
             // 
-            textBox1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(40, 261);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 26);
-            textBox1.TabIndex = 21;
+            txtCorreo.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCorreo.Location = new Point(40, 261);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(210, 26);
+            txtCorreo.TabIndex = 21;
             // 
             // lblTelefono
             // 
@@ -204,13 +204,13 @@
             lblTelefono.TabIndex = 24;
             lblTelefono.Text = "Teléfono";
             // 
-            // textBox2
+            // txtTelefono
             // 
-            textBox2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(40, 321);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(210, 26);
-            textBox2.TabIndex = 23;
+            txtTelefono.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelefono.Location = new Point(40, 321);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(210, 26);
+            txtTelefono.TabIndex = 23;
             // 
             // lblConfirmar
             // 
@@ -222,13 +222,13 @@
             lblConfirmar.TabIndex = 26;
             lblConfirmar.Text = "Confirmar Contraseña";
             // 
-            // textBox3
+            // txtConfirmar
             // 
-            textBox3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(40, 447);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(210, 26);
-            textBox3.TabIndex = 25;
+            txtConfirmar.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConfirmar.Location = new Point(40, 447);
+            txtConfirmar.Name = "txtConfirmar";
+            txtConfirmar.Size = new Size(210, 26);
+            txtConfirmar.TabIndex = 25;
             // 
             // formRegister
             // 
@@ -236,15 +236,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(294, 584);
             Controls.Add(lblConfirmar);
-            Controls.Add(textBox3);
+            Controls.Add(txtConfirmar);
             Controls.Add(lblTelefono);
-            Controls.Add(textBox2);
+            Controls.Add(txtTelefono);
             Controls.Add(lblCorreo);
-            Controls.Add(textBox1);
+            Controls.Add(txtCorreo);
             Controls.Add(lblWarningRegistro);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(txtRegistroContraseña);
+            Controls.Add(txtContraseña);
             Controls.Add(txtRegistroUsuario);
             Controls.Add(lblConstraseña);
             Controls.Add(lblUsuario);
@@ -274,14 +274,14 @@
         private TextBox txtRegistroNombre;
         private Label label1;
         private Label label2;
-        private TextBox txtRegistroContraseña;
+        private TextBox txtContraseña;
         private TextBox txtRegistroUsuario;
         private Label lblWarningRegistro;
         private Label lblCorreo;
-        private TextBox textBox1;
+        private TextBox txtCorreo;
         private Label lblTelefono;
-        private TextBox textBox2;
+        private TextBox txtTelefono;
         private Label lblConfirmar;
-        private TextBox textBox3;
+        private TextBox txtConfirmar;
     }
 }
