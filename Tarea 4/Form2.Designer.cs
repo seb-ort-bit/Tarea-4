@@ -94,7 +94,7 @@
             // btnEntrar
             // 
             btnEntrar.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.Location = new Point(40, 516);
+            btnEntrar.Location = new Point(41, 516);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(210, 34);
             btnEntrar.TabIndex = 11;
@@ -153,6 +153,7 @@
             txtContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtContraseña.Location = new Point(40, 384);
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(210, 26);
             txtContraseña.TabIndex = 17;
             // 
@@ -169,11 +170,12 @@
             lblWarningRegistro.AutoSize = true;
             lblWarningRegistro.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             lblWarningRegistro.ForeColor = Color.Crimson;
-            lblWarningRegistro.Location = new Point(42, 489);
+            lblWarningRegistro.Location = new Point(36, 472);
             lblWarningRegistro.Name = "lblWarningRegistro";
-            lblWarningRegistro.Size = new Size(221, 20);
+            lblWarningRegistro.Size = new Size(221, 40);
             lblWarningRegistro.TabIndex = 20;
-            lblWarningRegistro.Text = "Hay campos obligatorios vacíos";
+            lblWarningRegistro.Text = "Hay campos obligatorios vacíos\r\no contienen espacios";
+            lblWarningRegistro.TextAlign = ContentAlignment.TopCenter;
             lblWarningRegistro.Visible = false;
             // 
             // lblCorreo
@@ -227,6 +229,7 @@
             txtConfirmar.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtConfirmar.Location = new Point(40, 447);
             txtConfirmar.Name = "txtConfirmar";
+            txtConfirmar.PasswordChar = '*';
             txtConfirmar.Size = new Size(210, 26);
             txtConfirmar.TabIndex = 25;
             // 

@@ -51,6 +51,7 @@
             txtLoginContraseña.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtLoginContraseña.Location = new Point(38, 148);
             txtLoginContraseña.Name = "txtLoginContraseña";
+            txtLoginContraseña.PasswordChar = '*';
             txtLoginContraseña.Size = new Size(210, 26);
             txtLoginContraseña.TabIndex = 1;
             // 

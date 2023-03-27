@@ -24,15 +24,28 @@ namespace Tarea_4
             foreach (var txtBox in this.Controls.OfType<TextBox>())
             {
 
-                if (string.IsNullOrWhiteSpace(txtBox.Text))
+                if (string.IsNullOrWhiteSpace(txtBox.Text) || txtBox.Text.Contains(" "))
                 {
+ 
+                    lblWarningRegistro.Text = "Hay campos obligatorios vacíos\r\no contienen espacios";
                     lblWarningRegistro.Visible = true;
                     return false;
 
                 }
+                if (txtConfirmar.Text != txtContraseña.Text)
+                {
+                    lblWarningRegistro.Text = "Las contraseñas son diferentes";
+                    lblWarningRegistro.Visible = true;
+                    return false;
+                }
             }
-
             return true;
+        }
+
+        private string obtenerUsuario()
+        {
+            string usuario = txtRegistroNombre.Text + " " + txtRegistroApellido + " " + txtRegistroUsuario + " " + txtCorreo + " " + txtTelefono + " " + txtConfirmar;
+            return usuario;
 
         }
 
@@ -40,21 +53,28 @@ namespace Tarea_4
         {
             if (validarRegistro() == true)
             {
-                var path = Application.StartupPath + "\\datos.txt\\";
-                if (!File.Exists(path)) { }
+                List<string> tempData = new List<string>();
+                bool userExists;
+
+                var path = Path.Combine(Application.StartupPath, "datos.txt");
                 StreamWriter sw = new StreamWriter(path);
                 StreamReader sr = new StreamReader(path);
-                var linea = sr.ReadLine();
-                //loop que lee todas las lineas del archivo
-                while (linea != null)
+
+                if (File.Exists(path))
                 {
+                    var linea = sr.ReadLine();
+                    //loop que lee todas las lineas del archivo
+                    while (linea != null)
+                    {
+                        tempData.Add(linea);
 
 
-                    //Siguiente Linea
-                    linea = sr.ReadLine();
+                        //Siguiente Linea
+                        linea = sr.ReadLine();
+                    }
+                    //cerrar archivo
+                    sr.Close();
                 }
-                //cerrar archivo
-                sr.Close();
             }
         }
 
@@ -65,7 +85,7 @@ namespace Tarea_4
 
         private void formRegister_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
