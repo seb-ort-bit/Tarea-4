@@ -36,6 +36,7 @@
             linkRegistrate = new LinkLabel();
             lblUsuario = new Label();
             lblConstraseña = new Label();
+            lblWarningLogin = new Label();
             SuspendLayout();
             // 
             // txtLoginUsuario
@@ -81,7 +82,7 @@
             // 
             lblCuenta.AutoSize = true;
             lblCuenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCuenta.Location = new Point(27, 260);
+            lblCuenta.Location = new Point(27, 274);
             lblCuenta.Name = "lblCuenta";
             lblCuenta.Size = new Size(170, 21);
             lblCuenta.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             linkRegistrate.AutoSize = true;
             linkRegistrate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            linkRegistrate.Location = new Point(190, 260);
+            linkRegistrate.Location = new Point(190, 274);
             linkRegistrate.Name = "linkRegistrate";
             linkRegistrate.Size = new Size(80, 21);
             linkRegistrate.TabIndex = 5;
@@ -119,11 +120,25 @@
             lblConstraseña.TabIndex = 7;
             lblConstraseña.Text = "Contraseña";
             // 
+            // lblWarningLogin
+            // 
+            lblWarningLogin.AutoSize = true;
+            lblWarningLogin.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWarningLogin.ForeColor = Color.Crimson;
+            lblWarningLogin.Location = new Point(23, 230);
+            lblWarningLogin.Name = "lblWarningLogin";
+            lblWarningLogin.Size = new Size(259, 40);
+            lblWarningLogin.TabIndex = 21;
+            lblWarningLogin.Text = "Debe ingresar su usuario y contraseña\r\ny registrarse si no lo ha hecho\r\n";
+            lblWarningLogin.TextAlign = ContentAlignment.TopCenter;
+            lblWarningLogin.Visible = false;
+            // 
             // formLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(294, 295);
+            ClientSize = new Size(294, 302);
+            Controls.Add(lblWarningLogin);
             Controls.Add(lblConstraseña);
             Controls.Add(lblUsuario);
             Controls.Add(linkRegistrate);
@@ -153,5 +168,6 @@
         private LinkLabel linkRegistrate;
         private Label lblUsuario;
         private Label lblConstraseña;
+        private Label lblWarningLogin;
     }
 }

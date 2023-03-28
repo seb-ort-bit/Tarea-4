@@ -32,7 +32,7 @@
             lblUsuario = new Label();
             linkRegistrate = new LinkLabel();
             lblCuenta = new Label();
-            btnEntrar = new Button();
+            btnRegistrar = new Button();
             lblLogin = new Label();
             txtRegistroApellido = new TextBox();
             txtRegistroNombre = new TextBox();
@@ -91,16 +91,16 @@
             lblCuenta.TabIndex = 12;
             lblCuenta.Text = "¿Ya tienes una cuenta?";
             // 
-            // btnEntrar
+            // btnRegistrar
             // 
-            btnEntrar.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.Location = new Point(41, 516);
-            btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(210, 34);
-            btnEntrar.TabIndex = 11;
-            btnEntrar.Text = "Registrar";
-            btnEntrar.UseVisualStyleBackColor = true;
-            btnEntrar.Click += btnEntrar_Click;
+            btnRegistrar.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistrar.Location = new Point(41, 516);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(210, 34);
+            btnRegistrar.TabIndex = 11;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // lblLogin
             // 
@@ -253,7 +253,7 @@
             Controls.Add(lblUsuario);
             Controls.Add(linkRegistrate);
             Controls.Add(lblCuenta);
-            Controls.Add(btnEntrar);
+            Controls.Add(btnRegistrar);
             Controls.Add(lblLogin);
             Controls.Add(txtRegistroApellido);
             Controls.Add(txtRegistroNombre);
@@ -271,7 +271,7 @@
         private Label lblUsuario;
         private LinkLabel linkRegistrate;
         private Label lblCuenta;
-        private Button btnEntrar;
+        private Button btnRegistrar;
         private Label lblLogin;
         private TextBox txtRegistroApellido;
         private TextBox txtRegistroNombre;
