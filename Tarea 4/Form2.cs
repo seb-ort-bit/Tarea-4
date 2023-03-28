@@ -86,8 +86,6 @@ namespace Tarea_4
                     while (linea != null)
                     {
                         if (linea == usuarioNuevo) { userExists = true; }
-                        Console.WriteLine("linea " + linea);
-                        Console.WriteLine("usuarioNuevo " + usuarioNuevo);
                         //Siguiente Linea
                         linea = sr.ReadLine();
                     }
