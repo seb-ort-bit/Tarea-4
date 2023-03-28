@@ -44,7 +44,7 @@ namespace Tarea_4
 
             if (!(camposFaltantes == ""))
             {
-                MessageBox.Show(camposFaltantes, "Los siguientes campos están vacíos:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(camposFaltantes, "Los siguientes campos están vacíos o contienen espacios:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

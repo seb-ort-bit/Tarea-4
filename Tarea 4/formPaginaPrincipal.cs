@@ -16,5 +16,15 @@ namespace Tarea_4
         {
             InitializeComponent();
         }
+
+        private void formPaginaPrincipalClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new formLogin()).Show(); this.Hide();
+        }
     }
 }

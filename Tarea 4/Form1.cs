@@ -7,29 +7,37 @@ namespace Tarea_4
             InitializeComponent();
         }
 
-        private bool validarLogin(bool Valido)
+        private bool validarLogin()
         {
             var path = Path.Combine(Application.StartupPath, "datos.txt");
-
-            foreach (var txtBox in this.Controls.OfType<TextBox>())
-            {
-
-                if (string.IsNullOrWhiteSpace(txtBox.Text))
+            if (File.Exists(path))
+            { 
+                foreach (var txtBox in this.Controls.OfType<TextBox>())
                 {
-                    lblWarningLogin.Visible = true;
-                    return false;
 
+                    if (string.IsNullOrWhiteSpace(txtBox.Text))
+                    {
+                        lblWarningLogin.Visible = true;
+                        return false;
+
+                    }
                 }
             }
-
+            else
+            {
+                lblWarningLogin.Text = "Este usuario no existe";
+                lblWarningLogin.Visible = true;
+                return false;
+            }
             return true;
 
         }
 
-        private string obtenerUsuario()
+        private string[] obtenerUsuario()
         {
             string usuario = txtLoginUsuario.Text + " " + txtLoginContraseña.Text;
-            return usuario;
+            string[] usuarioSplit = usuario.Split(" ");
+            return usuarioSplit;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,22 +53,24 @@ namespace Tarea_4
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string usuarioNuevo = obtenerUsuario();
-            List<string> tempData = new List<string>();
+            Console.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \n aklsjdiowasd \n AAAAAAAAAAAAAAAAAAAAAAA");
+            string[] usuarioNuevo = obtenerUsuario();
             bool userExists = false;
 
+            string[] divided;
+
             var path = Path.Combine(Application.StartupPath, "datos.txt");
-            StreamWriter sw = new StreamWriter(path);
             StreamReader sr = new StreamReader(path);
 
-            if (File.Exists(path))
+            if (validarLogin())
             {
                 var linea = sr.ReadLine();
                 //loop que lee todas las lineas del archivo
                 while (linea != null)
                 {
-                    tempData.Add(linea);
-                    if (linea == usuarioNuevo) { userExists = true; }
+                    divided = linea.Split(" ");
+
+                    if (divided[2] == usuarioNuevo[0] && divided[5] == usuarioNuevo[1]) { userExists = true; }
 
                     //Siguiente Linea
                     linea = sr.ReadLine();
@@ -72,7 +82,12 @@ namespace Tarea_4
                 {
                     (new formPaginaPrincipal()).Show(); this.Hide();
                 }
+                else
+                {
+                    lblWarningLogin.Text = "Este usuario no existe";
+                    lblWarningLogin.Visible = true;
 
+                }
             }
         }
 
