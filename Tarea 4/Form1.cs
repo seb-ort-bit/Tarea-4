@@ -9,11 +9,14 @@ namespace Tarea_4
 
         private bool validarLogin(bool Valido)
         {
+            var path = Path.Combine(Application.StartupPath, "datos.txt");
+
             foreach (var txtBox in this.Controls.OfType<TextBox>())
             {
 
                 if (string.IsNullOrWhiteSpace(txtBox.Text))
                 {
+                    lblWarningLogin.Visible = true;
                     return false;
 
                 }
@@ -21,6 +24,12 @@ namespace Tarea_4
 
             return true;
 
+        }
+
+        private string obtenerUsuario()
+        {
+            string usuario = txtLoginUsuario.Text + " " + txtLoginContraseña.Text;
+            return usuario;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,7 +45,35 @@ namespace Tarea_4
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            string usuarioNuevo = obtenerUsuario();
+            List<string> tempData = new List<string>();
+            bool userExists = false;
+
+            var path = Path.Combine(Application.StartupPath, "datos.txt");
+            StreamWriter sw = new StreamWriter(path);
+            StreamReader sr = new StreamReader(path);
+
+            if (File.Exists(path))
+            {
+                var linea = sr.ReadLine();
+                //loop que lee todas las lineas del archivo
+                while (linea != null)
+                {
+                    tempData.Add(linea);
+                    if (linea == usuarioNuevo) { userExists = true; }
+
+                    //Siguiente Linea
+                    linea = sr.ReadLine();
+                }
+                //cerrar archivo
+                sr.Close();
+
+                if (userExists) 
+                {
+                    (new formPaginaPrincipal()).Show(); this.Hide();
+                }
+
+            }
         }
 
         private void formLogin_Load(object sender, EventArgs e)
