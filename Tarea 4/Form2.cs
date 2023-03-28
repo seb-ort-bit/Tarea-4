@@ -27,7 +27,6 @@ namespace Tarea_4
             //Revisar todos los textbox en el Form actual y verificar si estan vacios o solo tienen espacios.
             foreach (var txtBox in this.Controls.OfType<TextBox>())
             {
-                
 
                 if (string.IsNullOrWhiteSpace(txtBox.Text) || txtBox.Text.Contains(" "))
                 {
@@ -97,7 +96,6 @@ namespace Tarea_4
                 }
                 else
                 {
-
                     guardarUsuario(usuarioNuevo);
                     (new formPaginaPrincipal()).Show(); this.Hide();
                 }
