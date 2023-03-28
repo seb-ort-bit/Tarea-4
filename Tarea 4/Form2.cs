@@ -99,6 +99,7 @@ namespace Tarea_4
                 }
                 else
                 {
+
                     guardarUsuario(usuarioNuevo);
                     (new formPaginaPrincipal()).Show(); this.Hide();
                 }
