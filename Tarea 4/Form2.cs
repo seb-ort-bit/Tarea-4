@@ -13,7 +13,7 @@ namespace Tarea_4
 {
     public partial class formRegister : Form
     {
-        
+
         public formRegister()
         {
             InitializeComponent();
@@ -72,8 +72,8 @@ namespace Tarea_4
                 bool userExists = false;
 
                 var path = Path.Combine(Application.StartupPath, "datos.txt");
-                
-                
+
+
 
                 if (File.Exists(path))
                 {

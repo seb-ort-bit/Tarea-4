@@ -53,7 +53,6 @@ namespace Tarea_4
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \n aklsjdiowasd \n AAAAAAAAAAAAAAAAAAAAAAA");
             string[] usuarioNuevo = obtenerUsuario();
             bool userExists = false;
 
