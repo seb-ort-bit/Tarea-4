@@ -13,7 +13,7 @@ namespace Tarea_4
 {
     public partial class formRegister : Form
     {
-        
+
         public formRegister()
         {
             InitializeComponent();
@@ -27,7 +27,6 @@ namespace Tarea_4
             //Revisar todos los textbox en el Form actual y verificar si estan vacios o solo tienen espacios.
             foreach (var txtBox in this.Controls.OfType<TextBox>())
             {
-                
 
                 if (string.IsNullOrWhiteSpace(txtBox.Text) || txtBox.Text.Contains(" "))
                 {
@@ -45,7 +44,7 @@ namespace Tarea_4
 
             if (!(camposFaltantes == ""))
             {
-                MessageBox.Show(camposFaltantes, "Los siguientes campos están vacíos:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(camposFaltantes, "Los siguientes campos están vacíos o contienen espacios:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -73,8 +72,8 @@ namespace Tarea_4
                 bool userExists = false;
 
                 var path = Path.Combine(Application.StartupPath, "datos.txt");
-                
-                
+
+
 
                 if (File.Exists(path))
                 {
@@ -97,7 +96,6 @@ namespace Tarea_4
                 }
                 else
                 {
-
                     guardarUsuario(usuarioNuevo);
                     (new formPaginaPrincipal()).Show(); this.Hide();
                 }

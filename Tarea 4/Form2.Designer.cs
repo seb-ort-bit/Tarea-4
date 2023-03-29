@@ -258,6 +258,7 @@
             Controls.Add(txtRegistroApellido);
             Controls.Add(txtRegistroNombre);
             Name = "formRegister";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrarse";
             FormClosing += formRegister_Closing;
             Load += formRegister_Load;
