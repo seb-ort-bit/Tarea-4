@@ -58,11 +58,11 @@ namespace Tarea_4
 
             string[] divided;
 
-            var path = Path.Combine(Application.StartupPath, "datos.txt");
-            StreamReader sr = new StreamReader(path);
-
             if (validarLogin())
             {
+                var path = Path.Combine(Application.StartupPath, "datos.txt");
+                StreamReader sr = new StreamReader(path);
+
                 var linea = sr.ReadLine();
                 //loop que lee todas las lineas del archivo
                 while (linea != null)
