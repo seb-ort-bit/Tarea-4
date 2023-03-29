@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,6 +84,7 @@ namespace Tarea_4
         private void comEditarUsuario_SelectedIndexChange(object sender, EventArgs e)
         {
             validarEdicion();
+            btnEliminar.Enabled = true;
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -138,5 +140,25 @@ namespace Tarea_4
             (new formPaginaPrincipal()).Show(); this.Hide();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var path = Path.Combine(Application.StartupPath, "datos.txt");
+
+            string[] lines = System.IO.File.ReadAllLines(path);
+            List<string> linesList = new List<string>(lines);
+
+            foreach (var usuario in lines.Select((data, index) => (data, index)))
+            {
+                if (usuario.index == comEditarUsuario.SelectedIndex)
+                {
+                    linesList.RemoveAt(usuario.index);
+                }
+            }
+            lines = linesList.ToArray();
+
+            System.IO.File.WriteAllLines(path, lines);
+            (new formPaginaPrincipal()).Show(); this.Hide();
+
+        }
     }
 }

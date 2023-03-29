@@ -83,7 +83,7 @@
             lblNombre = new Label();
             lblTelefono = new Label();
             lblCorreo = new Label();
-            button1 = new Button();
+            btnCerrarSesion = new Button();
             comEditarUsuario = new ComboBox();
             lblEditarUsuario = new Label();
             txtNombre = new TextBox();
@@ -93,6 +93,7 @@
             label2 = new Label();
             txtCorreo = new TextBox();
             btnGuardarCambios = new Button();
+            btnEliminar = new Button();
             SuspendLayout();
             // 
             // lblNombre
@@ -128,18 +129,18 @@
             lblCorreo.Text = "Correo";
             lblCorreo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnCerrarSesion
             // 
-            button1.BackColor = Color.IndianRed;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(586, 393);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 35);
-            button1.TabIndex = 4;
-            button1.Text = "Cerrar Sesión";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnCerrarSesion.BackColor = Color.IndianRed;
+            btnCerrarSesion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(586, 416);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(138, 35);
+            btnCerrarSesion.TabIndex = 4;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += button1_Click;
             // 
             // comEditarUsuario
             // 
@@ -231,12 +232,27 @@
             btnGuardarCambios.UseVisualStyleBackColor = true;
             btnGuardarCambios.Click += btnGuardarCambios_Click;
             // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = Color.IndianRed;
+            btnEliminar.Enabled = false;
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(586, 377);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(138, 33);
+            btnEliminar.TabIndex = 14;
+            btnEliminar.Text = "Eliminar Usuario";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += button1_Click_1;
+            // 
             // formPaginaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(751, 469);
+            Controls.Add(btnEliminar);
             Controls.Add(btnGuardarCambios);
             Controls.Add(label2);
             Controls.Add(txtCorreo);
@@ -246,7 +262,7 @@
             Controls.Add(txtNombre);
             Controls.Add(lblEditarUsuario);
             Controls.Add(comEditarUsuario);
-            Controls.Add(button1);
+            Controls.Add(btnCerrarSesion);
             Controls.Add(lblCorreo);
             Controls.Add(lblTelefono);
             Controls.Add(lblNombre);
@@ -265,7 +281,7 @@
         private Label lblNombre;
         private Label lblTelefono;
         private Label lblCorreo;
-        private Button button1;
+        private Button btnCerrarSesion;
         private ComboBox comEditarUsuario;
         private Label lblEditarUsuario;
         private TextBox txtNombre;
@@ -275,5 +291,6 @@
         private Label label2;
         private TextBox txtCorreo;
         private Button btnGuardarCambios;
+        private Button btnEliminar;
     }
 }
