@@ -10,26 +10,28 @@ namespace Tarea_4
         private bool validarLogin()
         {
             var path = Path.Combine(Application.StartupPath, "datos.txt");
-            if (File.Exists(path))
-            { 
-                foreach (var txtBox in this.Controls.OfType<TextBox>())
+
+            foreach (var txtBox in this.Controls.OfType<TextBox>())
+            {
+
+                if (string.IsNullOrWhiteSpace(txtBox.Text))
                 {
 
-                    if (string.IsNullOrWhiteSpace(txtBox.Text))
-                    {
-                        lblWarningLogin.Visible = true;
-                        return false;
+                    lblWarningLogin.Visible = true;
+                    return false;
 
-                    }
                 }
             }
-            else
+            if (File.Exists(path))
             {
-                lblWarningLogin.Text = "Este usuario no existe";
+                return true;
+            }
+            else 
+            {
                 lblWarningLogin.Visible = true;
                 return false;
+
             }
-            return true;
 
         }
 
@@ -83,7 +85,6 @@ namespace Tarea_4
                 }
                 else
                 {
-                    lblWarningLogin.Text = "Este usuario no existe";
                     lblWarningLogin.Visible = true;
 
                 }
